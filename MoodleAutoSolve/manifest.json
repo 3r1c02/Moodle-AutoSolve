@@ -1,0 +1,27 @@
+{
+  "name": "Moodle Auto-Solve",
+  "description": "Solves most of your Moodle H5P Quizzes",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["https://*/mod/hvp*"],
+      "run_at": "document_idle",
+      "js": ["moodle-solve.js"]
+    }
+ ],
+ "action": {
+  "default_popup": "popup.html"
+  },
+  "permissions": ["scripting", "storage"],
+  "icons": {
+    "16": "/images/MAS-Logox16.png",
+    "32": "/images/MAS-Logox32.png",
+    "48": "/images/MAS-Logox48.png",
+    "128": "/images/MAS-Logox128.png"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  }
+}
