@@ -13,7 +13,10 @@
  "action": {
   "default_popup": "popup.html"
   },
-  "permissions": ["scripting", "storage"],
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://*/mod/hvp*"
+  ],
   "icons": {
     "16": "/images/MAS-Logox16.png",
     "32": "/images/MAS-Logox32.png",
